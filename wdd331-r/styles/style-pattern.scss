@@ -1,0 +1,201 @@
+// Import Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// Font Mixins
+@mixin dancingscript-font {
+  font-family: "Dancing Script", cursive !important;
+}
+
+@mixin robotocondensed-font {
+  font-family: "Roboto Condensed", sans-serif !important;
+}
+
+// General Styles
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #2F4858;
+  padding: 5%;
+}
+
+body {
+  @include robotocondensed-font;
+  font-size: 85%;
+  color: #000000;
+  background-color: #4B8077;
+  margin: 0;
+  padding: 1em;
+}
+
+// Heading Styles
+h2, h3, h4 {
+  @include dancingscript-font;
+  margin: 0;
+}
+
+h1, .H1Tag {
+  background: #ce7604;
+  color: #fff;
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  @include dancingscript-font;
+}
+
+.h1Tag {
+  font-size: 6em;
+}
+
+h2 {
+  color: #fff;
+  font-weight: 900; // Heavy
+  font-size: 4em;
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+
+.h2Tag {
+  color: #fff;
+}
+
+.h3Tag {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 2.25em;
+  font-weight: 200; // Thin
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 0.5em 0 0.25em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 200; // Thin
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+// Paragraph Style
+p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+// Link Styles
+a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #000000;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: #ea2e49;
+  }
+}
+
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+
+  &.colors {
+    display: flex;
+    flex-flow: row wrap;
+
+    > h3 {
+      width: 100%;
+      flex: 1 0 100%;
+    }
+
+    > figure {
+      margin: 0;
+      flex: 1 1 25%;
+
+      .text-dark {
+        background-color: #000000;
+      }
+
+      .swatch {
+        width: 100%;
+        height: 100px;
+        border: 1px solid;
+      }
+
+      &:nth-child(5) .swatch {
+        background-color: #000000;
+      }
+
+      &:nth-child(4) .swatch {
+        background-color: #61120A;
+      }
+
+      &:nth-child(3) .swatch {
+        background-color: #003300;
+      }
+
+      &:nth-child(2) .swatch {
+        background-color: #00705C;
+      }
+
+      &:nth-child(1) .swatch {
+        background-color: #CE7604;
+      }
+    }
+  }
+
+  &.elements {
+    .element {
+      border: 1px solid;
+      margin: 0.5em;
+      padding: 1em;
+
+      &.accent1 {
+        background-color: #CE7604;
+        h4 {
+          color: #fff;
+        }
+      }
+
+      &.accent3 {
+        background-color: #003300;
+        h4 {
+          color: #fff;
+        }
+      }
+
+      p {
+        &.uppercase {
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #333;
+        }
+
+        &.uppercase-light {
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #fff;
+
+          &.accent4 {
+            background-color: #61120A;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
